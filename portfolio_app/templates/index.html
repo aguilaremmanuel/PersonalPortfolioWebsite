@@ -1,0 +1,349 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/Emman-Aguilar-logo-icon.png' %}" type="image/png">
+    <title>Emmanuel John F. Aguilar</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">EAguilar.</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#stacks">Stacks</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="inquire-link"><a href="{% url 'inquire_page' %}"><i class="fa-solid fa-fire-flame-curved"></i>Inquire Now</a></li>
+            </ul>
+            <button class="resume-btn">Resume</button>
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars open-menu-icon" id="open-menu-icon"></i>
+                <i class="fa-solid fa-xmark close-menu-icon" id="close-menu-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <aside class="responsive-menu" id="responsive-menu">
+
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#stacks">Stacks</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="inquire-link"><a href="#"><i class="fa-solid fa-fire-flame-curved"></i>Inquire Now</a></li>
+        </ul>
+
+    </aside>
+
+    <section class="home">
+
+        <div class="profile-photo">
+            <img src="{% static 'images/emman-aguilar-photo-no-bg.png' %}" alt="Emmanuel John F. Aguilar Profile Picture">
+        </div>
+
+        <div class="greetings-txt"><p>Hi, I'm Emmanuel John 👋</p></div>
+
+        <h1>
+            bringing <span>websites</span> to life from<br>scratch to deployment
+        </h1>
+
+        <div class="button-group">
+            <a href="#projects">
+                <div class="projects-btn">
+                    <i class="fa-solid fa-layer-group"></i> Project
+                </div>
+            </a>
+            <div class="resume-btn2">
+                <i class="fa-solid fa-download"></i> Resume
+            </div>
+        </div>
+
+        <div class="socials-icon">
+            <i class="fa-brands fa-square-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+        </div>
+
+    </section>
+
+    <section id="projects" class="projects">
+
+        <h1>Project Showcase</h1>
+        <div class="sub-title">List of my 8 projects.</div>
+        <div class="projects-container">    
+            
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/weeb-tee.png' %}" alt="Weeb Tee Website">
+                <h2>Weeb Tee</h2>
+                <p>A mobile-first e-commerce web-design for anime clothing.</p>
+                <div>
+                    <span>HTML</span><span>CSS</span><span>Javascript</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/manila-zoo.png' %}" alt="Reimagined Manila Zoo Website">
+                <h2>Manila Zoo</h2>
+                <p>A reimagined Manila Zoo website with interactive maps.</p>
+                <div>
+                    <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/track-it.png' %}" alt="TrackIt Website">
+                <h2>TrackIt</h2>
+                <p>A document tracking and management system with QR Code integration.</p>
+                <div>
+                    <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/furrperctly-polished.png' %}" alt="FurrPerfectly Polished Website">
+                <h2>Purrfectly Polished</h2>
+                <p>An e-commerce website offering products and services for dogs and cats.</p>
+                <div>
+                    <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/printhub.png' %}" alt="PrintHub Website">
+                <h2>PrintHub</h2>
+                <p>A website that helps printing shops manage their business.</p>
+                <div>
+                    <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/tech-quiz.png' %}" alt="Tech-Quiz Website">
+                <h2>Tech-Quiz</h2>
+                <p>A website for Information Technology quizzes.</p>
+                <div>
+                    <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/KGSPI-inventory2.png' %}" alt="King Global Sanitary Products Inc. Website">
+                <h2>KGSPI Inventory</h2>
+                <p>An inventory system with barcode integration for King Global Sanitary Products Inc.</p>
+                <div>
+                    <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/email-signature2.png' %}" alt="Changing Latitudes Email Signature">
+                <h2>Email Signature</h2>
+                <p>20+ Email signatures for Changing Latitudes.</p>
+                <div class="stacks-used">
+                    <span>HTML</span><span>CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stacks" class="stacks">
+        <h1>Technologies</h1>
+        <div class="stacks-container">
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Figma.png' %}" alt="Figma Logo">
+                    <h3>Figma</h3>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/HTML.png' %}" alt="HTML Logo">
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/CSS.png' %}" alt="CSS Logo">
+                    <h3>CSS</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Javascript.png' %}" alt="Javascript Logo">
+                    <h3>Javascript</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/SASS.png' %}" alt="SASS Logo">
+                    <h3>SASS</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Bootstrap.png' %}" alt="Bootstrap Logo">
+                    <h3>Bootstrap</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/PHP.png' %}" alt="PHP Logo">
+                    <h3>PHP</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Python.png' %}" alt="Python Logo">
+                    <h3>Python</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Django.png' %}" alt="Django Logo">
+                    <h3>Django</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/MySQL.png' %}" alt="MySQL Logo">
+                    <h3>MySQL</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Github.png' %}" alt="Github Logo">
+                    <h3>Github</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Git.png' %}" alt="Git Logo">
+                    <h3>Git</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/VSCode.png' %}" alt="VSCode Logo">
+                    <h3>VSCode</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Windows.png' %}" alt="Windows Logo">
+                    <h3>Windows</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/MacOS.png' %}" alt="MacOS Logo">
+                    <h3>MacOS</h3>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h1>About</h1>
+        <div class="info-container">
+            <div class="photo-container" data-aos="fade-right" data-aos-duration="900">
+                <img src="{% static 'images/emman-aguilar-photo-full.jpg' %}" alt="Emmanuel John F. Aguilar Photo">
+            </div>
+            <div class="details-container" data-aos="fade-left" data-aos-duration="900">
+                <h3>Hello!</h3>
+                <p>I'm Emmanuel John Aguilar. I'm currently a college student taking up Information Technology at the Polytechnic University of the Philippines. I'm a full-stack developer who loves using technology to solve real-world problems. I build web applications and create efficient APIs. I am always eager to learn new technologies and continuously work on improving my skills to build impactful solutions. If you have a project in mind or would like to collaborate, feel free to reach out at any time.</p>
+                <h3>My goal</h3>
+                <p>I aspire to be a full-stack web developer, working alongside others to develop innovative, responsive, and progressive web applications that make a positive impact on the community.</p>
+                <div class="btn-group">
+                    <span class="resume-btn"><i class="fa-solid fa-download"></i>Resume</span><span class="github-btn"><i class="fa-brands fa-github"></i>Github</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="education-container" data-aos="fade-up" data-aos-duration="500">
+
+        <div class="jhs-container">
+            <img src="{% static 'images/school-logos/BINHS2.png' %}" alt="">
+            <h2>BINHS</h2>
+            <p>2015-2019</p>
+            <p>With Honor</p>
+        </div>
+        <div class="shs-container">
+            <img src="{% static 'images/school-logos/PNC.png' %}" alt="">
+            <h2>PNC-SHS</h2>
+            <p>2019-2021</p>
+            <p>With Honor</p>
+        </div>
+        <div class="collage-container">
+            <img src="{% static 'images/school-logos/PUP.png' %}" alt="">
+            <h2>PUP</h2>
+            <p>2021-2025</p>
+            <p>President's Lister</p>
+        </div>
+    </div>
+
+    <div class="what-i-do-container">
+
+        <h1>What I do?</h1>
+
+        <div class="doings-container">
+
+            <div class="front-end" data-aos="fade-up" data-aos-duration="500">
+                <i class="fa-solid fa-brush"></i>
+                <h2>Front-End</h2>
+                <p>I create web interfaces using Bootstrap and SASS while prioritizing the user-friendliness.</p>
+            </div>
+            <div class="back-end" data-aos="fade-up" data-aos-duration="500">
+                <i class="fa-solid fa-code"></i>
+                <h2>Back-End</h2>
+                <p>I build scalable RESTful APIs using Django REST Framework (DRF), and implement server-side rendering (SSR) with Django templates.</p>
+            </div>
+            <div class="database" data-aos="fade-up" data-aos-duration="500">
+                <i class="fa-solid fa-database"></i>
+                <h2>Database</h2>
+                <p>I model, store, and manage a website data using databases such as MySQL database.</p>
+            </div>
+            <div class="deploy" data-aos="fade-up" data-aos-duration="500">
+                <i class="fa-solid fa-rocket"></i>
+                <h2>Deploy</h2>
+                <p>I deploy Django applications using Render, or PythonAnywhere.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill="#984a00" fill-opacity="1" d="M0,256L34.3,250.7C68.6,245,137,235,206,229.3C274.3,224,343,224,411,213.3C480,203,549,181,617,186.7C685.7,192,754,224,823,245.3C891.4,267,960,277,1029,266.7C1097.1,256,1166,224,1234,218.7C1302.9,213,1371,235,1406,245.3L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+
+    <footer>
+
+        <h1>EAguilar.</h1>
+
+        <p>© 2025 Emmanuel John Aguilar. All Rights Reserved.</p>
+        
+        <div class="links-container">
+            <div class="linked-in"><i class="fa-brands fa-linkedin"></i><span>Linked In</span></div>
+            <div class="github-link"><i class="fa-brands fa-github"></i><span>Github</span></div>
+            <div class="facebook-link"><i class="fa-brands fa-facebook"></i><span>Facebook</span></div>
+        </div>
+
+        <p>Made with ♡ using Django.</p>
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
