@@ -9,13 +9,18 @@
     <title>Emmanuel John F. Aguilar</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script defer src="{% static 'js/script.js' %}"></script>
+    <script defer src="{% static 'js/inquire.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 </head>
 <body>
     
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">EAguilar.</div>
+            <a href="{% url 'landing_page' %}" class="logo">EAguilar.</a>
             <ul class="nav-links">
                 <li><a href="{% url 'landing_page' %}#projects">Projects</a></li>
                 <li><a href="{% url 'landing_page' %}#stacks">Stacks</a></li>
@@ -61,34 +66,36 @@
 
             <div class="form">
                 
-                <div class="form-cont">
+                    <form id="inquireForm" class="form-cont" action="" method="">
+                        <div id="emailContainer" class="input-cont">
+                            <label for="email">Email Address<span> *</span></label>
+                            <input id="emailInput" type="email" name="email" placeholder="your.email@address.com" autocomplete="off" autocorrect="off" spellcheck="false" required>
+                        </div>
+                        <p id="warningMessage" class="warning"><span><i class="fa-solid fa-circle-exclamation"></i></span> Invalid email</p>
+                        <hr>
+                        <div class="input-cont">
+                            <label for="project-name">Project Name<span> *</span></label>
+                            <input type="text" name="project_name" placeholder="Title of your project" required>
+                        </div>
+                        <div class="input-cont">
+                            <label for="description">Project Description<span> *</span></label>
+                            <textarea name="description" id="" placeholder="Describe what your project is all about" required></textarea>
+                        </div>
+                        <hr>
+                        <label class="service-label">Select your service:<span> *</span></label> 
+                        <div class="service-options">
+                            <div class="service-btn" data-value="Front-End"><i class="fa-solid fa-paintbrush"></i><span>Front-End Only</span></div>
+                            <div class="service-btn" data-value="Back-End"><i class="fa-solid fa-code"></i><span>Back-End Only</span></div>
+                            <div class="service-btn" data-value="Deployment"><i class="fa-solid fa-rocket"></i><span>Deployment</span></div>
+                            <div class="service-btn" data-value="Full-Stack"><i class="fa-solid fa-layer-group"></i><span>Full-Stack</span></div>
+                        </div>
 
-                    <div class="input-cont">
-                        <label for="email">Email Address<span> *</span></label>
-                        <input type="email" name="email" placeholder="your.email@address.com" autocomplete="off" autocorrect="off" spellcheck="false" required>
-                    </div>
-                    <hr>
-                    <div class="input-cont">
-                        <label for="project-name">Project Name<span> *</span></label>
-                        <input type="text" name="project-name" placeholder="Title of your project" required>
-                    </div>
-                    <div class="input-cont">
-                        <label for="description">Project Description<span> *</span></label>
-                        <textarea name="description" id="" placeholder="Describe what your project is all about" required></textarea>
-                    </div>
-                    <hr>
-                    <label class="service-label">Select your service:<span> *</span></label> 
-                    <div class="service-options">
-                        <div class="service-btn"><i class="fa-solid fa-paintbrush"></i><span>Front-End Only</span></div>
-                        <div class="service-btn"><i class="fa-solid fa-code"></i><span>Back-End Only</span></div>
-                        <div class="service-btn"><i class="fa-solid fa-rocket"></i><span>Deployment</span></div>
-                        <div class="service-btn"><i class="fa-solid fa-layer-group"></i><span>Full-Stack</span></div>
-                    </div>
+                        <input id="service" type="hidden" name="service" required>
 
-                    <button id="inquireBtn" disabled>Inquire Now</button>
+                        <button type="button" id="inquireBtn" disabled>Inquire Now</button>
 
-                    <p>Submitting this form will notify me of your inquiry. Expect a response within 1 to 2 business days. Thank you for reaching out!</p>
-                </div>
+                        <p>Submitting this form will notify me of your inquiry. Expect a response within 1 to 2 business days. Thank you for reaching out!</p>
+                    </form>
             </div>
 
         </div>
@@ -103,14 +110,14 @@
         <p>© 2025 Emmanuel John Aguilar. All Rights Reserved.</p>
         
         <div class="links-container">
-            <div class="linked-in"><i class="fa-brands fa-linkedin"></i><span>Linked In</span></div>
-            <div class="github-link"><i class="fa-brands fa-github"></i><span>Github</span></div>
-            <div class="facebook-link"><i class="fa-brands fa-facebook"></i><span>Facebook</span></div>
+            <a href="https://www.linkedin.com/in/aguilaremmanueljohn/" class="linked-in" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>Linked In</span></a>
+            <a href="https://github.com/aguilaremmanuel" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Github</span></a>
+            <a href="https://www.facebook.com/emman.felizardo.7" class="facebook-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
         </div>
 
-        <p>Made with Love ♡.</p>
+        <p>Made with ♡ using Django.</p>
 
     </footer>
-
+    
 </body>
 </html>

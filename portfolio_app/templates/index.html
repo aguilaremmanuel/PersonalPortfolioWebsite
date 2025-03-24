@@ -16,7 +16,7 @@
     
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">EAguilar.</div>
+            <a href="#home" class="logo">EAguilar.</a>
             <ul class="nav-links">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#stacks">Stacks</a></li>
@@ -43,7 +43,7 @@
 
     </aside>
 
-    <section class="home">
+    <section class="home" id="home">
 
         <div class="profile-photo">
             <img src="{% static 'images/emman-aguilar-photo-no-bg.png' %}" alt="Emmanuel John F. Aguilar Profile Picture">
@@ -61,15 +61,17 @@
                     <i class="fa-solid fa-layer-group"></i> Project
                 </div>
             </a>
-            <div class="resume-btn2">
-                <i class="fa-solid fa-download"></i> Resume
-            </div>
+            <a href="#">
+                <div class="resume-btn2">
+                    <i class="fa-solid fa-download"></i> Resume
+                </div>
+            </a>
         </div>
 
         <div class="socials-icon">
-            <i class="fa-brands fa-square-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-square-facebook"></i>
+            <a href="https://github.com/aguilaremmanuel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/aguilaremmanueljohn/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/emman.felizardo.7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
         </div>
 
     </section>
@@ -332,9 +334,9 @@
         <p>© 2025 Emmanuel John Aguilar. All Rights Reserved.</p>
         
         <div class="links-container">
-            <div class="linked-in"><i class="fa-brands fa-linkedin"></i><span>Linked In</span></div>
-            <div class="github-link"><i class="fa-brands fa-github"></i><span>Github</span></div>
-            <div class="facebook-link"><i class="fa-brands fa-facebook"></i><span>Facebook</span></div>
+            <a href="https://www.linkedin.com/in/aguilaremmanueljohn/" class="linked-in" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>Linked In</span></a>
+            <a href="https://github.com/aguilaremmanuel" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Github</span></a>
+            <a href="https://www.facebook.com/emman.felizardo.7" class="facebook-link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
         </div>
 
         <p>Made with ♡ using Django.</p>

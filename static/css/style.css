@@ -628,22 +628,23 @@ footer .links-container {
   flex-wrap: wrap;
   justify-content: center;
 }
-footer .links-container div {
+footer .links-container a {
   padding: 10px 27px;
   background-color: #7b3c00;
   border-radius: 20px;
   font-family: Arial, sans-serif;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
 }
-footer .links-container div:hover {
+footer .links-container a:hover {
   background-color: #602f02;
 }
-footer .links-container div i {
+footer .links-container a i {
   margin-right: 10px;
   opacity: 60%;
 }
-footer .links-container div span {
+footer .links-container a span {
   opacity: 60%;
 }
 
@@ -745,6 +746,9 @@ footer .links-container div span {
   max-width: 100%;
   resize: vertical;
 }
+.inquire .container .form .form-cont .error {
+  outline: 1px solid red !important;
+}
 .inquire .container .form .form-cont hr {
   width: 100%;
   margin: 0;
@@ -807,38 +811,15 @@ footer .links-container div span {
 .inquire .container .form .form-cont p {
   font-size: 13px;
 }
-
-/*
-@media (max-width: 750px) {
-    .navbar {
-        padding: 10px 35px;
-        .nav-container {
-            .nav-links, .resume-btn {
-                display: none;
-            }
-            .menu-icon {
-                display: block;
-            }
-        }
-    }
+.inquire .container .form .form-cont .warning {
+  display: none;
+  margin: 0 !important;
+  gap: 0;
+  color: red;
 }
-*/
-/*
-.button {
-  background: white;
-  color: $primary-color;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 400;
-  border: 2px solid white;
-  transition: 0.3s;
 
-  &:hover {
-    background: $primary-color;
-    color: white;
-    border-color: white;
-  }
+.notyf__toast {
+  font-family: Arial, sans-serif !important;
 }
-*/
 
 /*# sourceMappingURL=style.css.map */

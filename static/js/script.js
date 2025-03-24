@@ -1,4 +1,12 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
+
+    //toastr.success("This is a success message!");
+
+    
+      
+    
 
     let openMenuIcon = document.getElementById('open-menu-icon');
     let closeMenuIcon = document.getElementById('close-menu-icon');
@@ -54,11 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function() {
             document.querySelectorAll('.service-btn').forEach(btn => btn.classList.remove('selected'));
             this.classList.add('selected');
+            document.getElementById('service').value = this.getAttribute('data-value');
         });
     });
 
-    const inputs = document.querySelectorAll(".input-cont input, .input-cont textarea");
+    const inputs = document.querySelectorAll(".input-cont input, .input-cont textarea, #service");
     const button = document.getElementById("inquireBtn");
+    const hiddenInput = document.getElementById("service");
 
     function checkInputs() {
         let allFilled = true;
@@ -68,13 +78,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 allFilled = false;
             }
         });
+        
+        if(button) {
+            button.disabled = !allFilled;  // Enable button if all fields are filled
+        }
 
-        button.disabled = !allFilled;  // Enable button if all fields are filled
     }
 
     inputs.forEach(input => {
         input.addEventListener("input", checkInputs);
     });
+
+    if(hiddenInput) {
+        const observer = new MutationObserver(checkInputs);
+        observer.observe(hiddenInput, { attributes: true, attributeFilter: ["value"] });
+    }
 
     checkInputs();
 
