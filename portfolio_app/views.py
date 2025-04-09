@@ -3,7 +3,8 @@ from django.http import JsonResponse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.core.mail import EmailMessage
-
+import logging
+logger = logging.getLogger(__name__)
 
 def landing_page(request):
     return render(request, 'index.html')
@@ -11,8 +12,6 @@ def landing_page(request):
 def inquire_page(request):
     return render(request, 'inquire.html')
 
-import logging
-logger = logging.getLogger(__name__)
 def send_inquiry(request):
 
     if request.method == 'POST':
@@ -49,3 +48,6 @@ def send_inquiry(request):
             return JsonResponse({'error': str(e)})
 
     return JsonResponse({'success': 'success'})
+
+def private_project(request):
+    return render(request, 'private-project.html')

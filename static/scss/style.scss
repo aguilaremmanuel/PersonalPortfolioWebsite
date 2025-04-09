@@ -3,7 +3,7 @@
 
 $primary-color: #101010;
 $secondary-color: #984a00;
-$tertiary-color: white;
+$tertiary-color: #ffff;
 $low-black: #171717;
 
 $font-stack: 'League Spartan', sans-serif;
@@ -12,6 +12,13 @@ $text-color: #ebebeb;
 $section-width: 1100px;
 $global-padding: 4px 35px;
 $global-margin: 4px 35px;
+
+$github-color: #24292e;
+$linkedin-color: #0077B5;
+$facebook-color: #1877F2;
+$bg-color: #fff;
+$shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 html {
     scroll-behavior: smooth;
@@ -70,6 +77,16 @@ body {
     overflow-x: hidden;
 }
 
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: transparent; /* Dark blue, change as needed */
+}
+
 h1, h2, h3 {
     margin: 0;
     font-weight: 700;
@@ -97,6 +114,13 @@ a {
     @include hover-effect;
 }
 
+.partial {
+    text-align: center;
+    @include section-title;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
 .navbar {
     display: flex;
     position: fixed;
@@ -107,7 +131,7 @@ a {
     align-items: center;
     background: $secondary-color;
     color: $text-color;
-    z-index: 1;
+    z-index: 3;
 
     .nav-container {
 
@@ -205,7 +229,7 @@ a {
     background-color: $secondary-color;
     width: 100vw;
     transition: height 0.3s ease-in-out;
-    z-index: 1;
+    z-index: 3;
 
     .nav-links li{
         margin-bottom: 22px;
@@ -234,13 +258,12 @@ a {
     gap: 2px;
 
     .profile-photo {
-        margin-top: 80px;
-
+        margin-top: 140px;
+        z-index: 2;
         img {
             height: 220px;
             width: auto;
             object-fit: cover;
-
         }
     }
     
@@ -249,6 +272,7 @@ a {
         margin: 0;
         margin-top: 10px;
         font-size: 50px;
+        z-index: 2;
 
         @include responsive("md") {
             font-size: 40px;
@@ -271,6 +295,7 @@ a {
         margin-top: 20px;
         display: flex;
         gap: 10px;
+        z-index: 2;
 
         div {
             font-weight: 800;
@@ -303,10 +328,12 @@ a {
         }
     }
 
+    /*
     .socials-icon {
         margin-top: 50px;
         display: flex;
         gap: 15px;
+        z-index: 2;
 
         @include responsive("xs") {
             margin-top: 40px;
@@ -324,6 +351,85 @@ a {
 
         }
     }
+    */
+    .socials-icon {
+
+        display: inline-flex;
+        list-style: none;
+        font-family: $secondary-font;
+        margin-top: 80px;
+        align-items: center;
+        justify-self:center;
+        padding: 0;
+
+        .icon {
+          position: relative;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 28px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          opacity: 50%;
+          box-shadow: $shadow;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+            
+          &:hover {
+            opacity: 1;
+          }
+
+          &:hover .tooltip {
+            top: -45px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+      
+          &:hover span,
+          &:hover .tooltip {
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+          }
+        }
+      
+        .tooltip {
+          position: absolute;
+          top: 0;
+          font-size: 14px;
+          background: $bg-color;
+          color: $bg-color;
+          padding: 5px 8px;
+          border-radius: 5px;
+          box-shadow: $shadow;
+          opacity: 0;
+          pointer-events: none;
+          transition: $transition;
+      
+          &::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: $bg-color;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: $transition;
+          }
+        }
+      
+        // Social Media Hover Effects
+        @each $social, $color in (github: $github-color, linkedin: $linkedin-color, facebook: $facebook-color) {
+          .#{$social}:hover,
+          .#{$social}:hover .tooltip,
+          .#{$social}:hover .tooltip::before {
+            background: $color;
+            color: #fff;
+          }
+        }
+    }
 }
 
 .projects {
@@ -338,6 +444,7 @@ a {
         padding: 8px 20px;
         background-color: $low-black;
         border-radius: 20px;
+        z-index: 2;
     }
 
     .projects-container {
@@ -358,6 +465,7 @@ a {
         background-color: $low-black;
         padding: 25px;
         cursor: pointer;
+        z-index: 2;
 
         @include responsive("lg") {
             width: calc((100% - 40px) / 2);
@@ -412,6 +520,7 @@ a {
 
     height: 100vh;
     @include section-layout;
+    padding-top: 100px;
 
     h1 {
         @include section-title;
@@ -430,6 +539,7 @@ a {
         flex-wrap: wrap;
         gap: 20px;
         margin-top: 50px;
+        z-index: 2;
 
         .stack-box {
             display: flex;
@@ -441,6 +551,7 @@ a {
             border: 1px solid #303030;
             padding: 15px;
             overflow: hidden;
+            background-color: #101010;
             transition: background 0.3s ease-in-out;
 
             @include responsive("sm") {
@@ -485,14 +596,17 @@ a {
             }
 
         }
+
+        
+        
     }
 
 }
 
-
 .about {
 
     @include section-layout;
+    padding-top: 40px;
     height: 100vh;
 
     @include responsive("md") {
@@ -508,7 +622,8 @@ a {
         width: 100%;
         max-width: $section-width;
         gap: 5vw;
-        margin-top: 30px;
+        margin-top: 50px;
+        z-index: 2;
 
         @include responsive("md") {
             flex-direction: column;
@@ -610,6 +725,7 @@ a {
     background-color: $low-black;
     width: 100%;
     height: 200px;
+    margin-bottom: 200px;
 
     @include responsive("md") {
         flex-direction: column;
@@ -645,9 +761,85 @@ a {
 
 }
 
-.what-i-do-container {
+.org-container {
 
+    position: relative;
     @include section-layout;
+    z-index: 2;
+    padding: 0 35px;
+
+    .content {
+        display: flex;
+        width: 100%;
+        max-width: $section-width;
+        background-color: $primary-color;
+        border-radius: 5px;
+        border: 1px solid #1a3f26;
+
+        @include responsive("md") {
+            flex-direction: column;
+        }
+
+        .tpg-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 90px;
+
+
+            img {
+                height: 120px;
+                width: 120px;
+                opacity: 80%;
+            }
+        }
+
+        .tpg-text {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            padding: 20px 0;
+            padding-right: 20px;
+
+            @include responsive("md") {
+                align-items: center;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            h2 {
+                font-size: 35px;
+                opacity: 60%;
+                @include responsive("sm") {
+                    font-size: 30px;
+
+                }
+            }
+            
+            p {
+                margin-top: 2px;
+                font-style: italic;
+                opacity: 60%;
+
+            }
+            .position {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                opacity: 60%;
+            }
+        }
+        
+
+
+    }
+}
+
+.what-i-do-container {
+    
+    @include section-layout;
+    margin-top: 120px;
 
     h1 {
         @include section-title;
@@ -661,6 +853,7 @@ a {
         width: 100%;
         max-width: $section-width;
         gap: 20px;
+        z-index: 2;
 
         div {
             width: calc(50% - 10px);
@@ -696,10 +889,14 @@ a {
     
 }
 
-
+svg {
+    position: relative;
+    z-index: 2;
+}
 
 footer {
-
+    position: relative;
+    z-index: 2;
     @include section-layout;
     background-color: $secondary-color;
     width: 100vw;
@@ -720,6 +917,7 @@ footer {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
+        z-index: 2;
 
         a {
             padding: 10px 27px;
@@ -956,4 +1154,38 @@ footer {
 
 .notyf__toast {
     font-family: Arial, sans-serif !important;
-  }
+}
+
+.private-project {
+ 
+    @include section-layout;
+    height: 100vh;
+    justify-content: center;
+
+    img {
+        height: 150px;
+        width: auto;
+    }
+
+    h2 {
+        margin-top: 10px;
+        font-family: $secondary-font;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    a {
+        background-color: white;
+        color: #101010;
+        padding: 10px 17px;
+        font-family: $secondary-font;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 20px;
+
+    }
+
+}

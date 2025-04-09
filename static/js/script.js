@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //toastr.success("This is a success message!");
 
-    
-      
-    
-
     let openMenuIcon = document.getElementById('open-menu-icon');
     let closeMenuIcon = document.getElementById('close-menu-icon');
     let responsiveMenu = document.getElementById('responsive-menu');

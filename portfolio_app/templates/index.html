@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="{% static 'js/script.js' %}"></script>
+
 </head>
 <body>
+    <div id="particles-js"></div>
     
     <nav class="navbar">
         <div class="nav-container">
@@ -68,11 +70,29 @@
             </a>
         </div>
 
-        <div class="socials-icon">
-            <a href="https://github.com/aguilaremmanuel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://www.linkedin.com/in/aguilaremmanueljohn/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/emman.felizardo.7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
-        </div>
+        <!--
+            <div class="socials-icon">
+                <a href="https://github.com/aguilaremmanuel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.linkedin.com/in/aguilaremmanueljohn/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/emman.felizardo.7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+        -->
+
+        <ul class="socials-icon">
+            <a href="https://github.com/aguilaremmanuel" target="_blank" rel="noopener noreferrer" class="icon github">
+                <span class="tooltip">Github</span>
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/aguilaremmanueljohn/" target="_blank" rel="noopener noreferrer" class="icon linkedin">
+                <span class="tooltip">LinkedIn</span>
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/emman.felizardo.7" target="_blank" rel="noopener noreferrer" class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+        </ul>
 
     </section>
 
@@ -91,41 +111,41 @@
                 </div>
             </div>
 
-            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+            <a href="https://reimaginedmanilazoo.great-site.net/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/manila-zoo.png' %}" alt="Reimagined Manila Zoo Website">
                 <h2>Manila Zoo</h2>
                 <p>A reimagined Manila Zoo website with interactive maps.</p>
                 <div>
                     <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>MySQL</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+            <a href="https://github.com/aguilaremmanuel/TrackItProject" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/track-it.png' %}" alt="TrackIt Website">
                 <h2>TrackIt</h2>
                 <p>A document tracking and management system with QR Code integration.</p>
                 <div>
                     <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+            <!-- <div class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/furrperctly-polished.png' %}" alt="FurrPerfectly Polished Website">
                 <h2>Purrfectly Polished</h2>
                 <p>An e-commerce website offering products and services for dogs and cats.</p>
                 <div>
                     <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>MySQL</span>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+            <a href="https://printhub.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/printhub.png' %}" alt="PrintHub Website">
                 <h2>PrintHub</h2>
                 <p>A website that helps printing shops manage their business.</p>
                 <div>
                     <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
                 </div>
-            </div>
+            </a>
 
             <div class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/tech-quiz.png' %}" alt="Tech-Quiz Website">
@@ -136,6 +156,7 @@
                 </div>
             </div>
 
+            <!--
             <div class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/KGSPI-inventory2.png' %}" alt="King Global Sanitary Products Inc. Website">
                 <h2>KGSPI Inventory</h2>
@@ -144,22 +165,23 @@
                     <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
                 </div>
             </div>
+            -->
 
-            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+            <a href="{% url 'private_project' %}" class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/email-signature2.png' %}" alt="Changing Latitudes Email Signature">
                 <h2>Email Signature</h2>
                 <p>20+ Email signatures for Changing Latitudes.</p>
                 <div class="stacks-used">
                     <span>HTML</span><span>CSS</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
     <section id="stacks" class="stacks">
         <h1>Technologies</h1>
         <div class="stacks-container">
-            <div data-aos="fade-up">
+            <div class="hey" data-aos="fade-up">
                 <div class="stack-box">
                     <img src="{% static 'images/stacks-logos/Figma.png' %}" alt="Figma Logo">
                     <h3>Figma</h3>
@@ -212,6 +234,12 @@
                 <div class="stack-box">
                     <img src="{% static 'images/stacks-logos/Django.png' %}" alt="Django Logo">
                     <h3>Django</h3>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="stack-box">
+                    <img src="{% static 'images/stacks-logos/Postman.png' %}" alt="Postman Logo">
+                    <h3>Postman</h3>
                 </div>
             </div>
             <div data-aos="fade-up">
@@ -294,6 +322,22 @@
         </div>
     </div>
 
+    <h1 class="partial">Organization</h1>
+
+    <div class="org-container" data-aos="fade-up" data-aos-duration="500">
+
+        <div class="content">
+            <div class="tpg-logo">
+                <img src="{% static 'images/PUP-The-Programmers-Guild.png' %}" alt="PUP The Programmer's Guild Logo">
+            </div>
+            <div class="tpg-text">
+                <h2>PUP The Programmer's Guild</h2>
+                <p class="position">Academic Committee Member <span>(2021-Present)</span></p>
+                <p>The PUP Programmers' Guild is a university-wide organization composed of different programmers and developers, conducting various events and activities related to the fields of programming and development.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="what-i-do-container">
 
         <h1>What I do?</h1>
@@ -325,6 +369,8 @@
 
     </div>
 
+    
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill="#984a00" fill-opacity="1" d="M0,256L34.3,250.7C68.6,245,137,235,206,229.3C274.3,224,343,224,411,213.3C480,203,549,181,617,186.7C685.7,192,754,224,823,245.3C891.4,267,960,277,1029,266.7C1097.1,256,1166,224,1234,218.7C1302.9,213,1371,235,1406,245.3L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
 
     <footer>
@@ -343,7 +389,29 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 700 } },
+                color: { value: "#984a00" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#984a00", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 3 }
+            },
+            interactivity: {
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: false, mode: "push" }
+                },
+            }
+        });
+
+    </script>
     <script>
         AOS.init();
     </script>
