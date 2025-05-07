@@ -40,7 +40,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#stacks">Stacks</a></li>
             <li><a href="#about">About</a></li>
-            <li class="inquire-link"><a href="#"><i class="fa-solid fa-fire-flame-curved"></i>Inquire Now</a></li>
+            <li class="inquire-link"><a href="{% url 'inquire_page' %}"><i class="fa-solid fa-fire-flame-curved"></i>Inquire Now</a></li>
         </ul>
 
     </aside>
@@ -99,17 +99,10 @@
     <section id="projects" class="projects">
 
         <h1>Project Showcase</h1>
-        <div class="sub-title">List of my 8 projects.</div>
-        <div class="projects-container">    
+        <div class="sub-title">List of my 6 projects.</div>
+        <div class="projects-container">
             
-            <div class="project-box" data-aos="fade-up" data-aos-duration="500">
-                <img src="{% static 'images/project-photos/weeb-tee.png' %}" alt="Weeb Tee Website">
-                <h2>Weeb Tee</h2>
-                <p>A mobile-first e-commerce web-design for anime clothing.</p>
-                <div>
-                    <span>HTML</span><span>CSS</span><span>Javascript</span>
-                </div>
-            </div>
+            
 
             <a href="https://reimaginedmanilazoo.great-site.net/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/manila-zoo.png' %}" alt="Reimagined Manila Zoo Website">
@@ -117,6 +110,15 @@
                 <p>A reimagined Manila Zoo website with interactive maps.</p>
                 <div>
                     <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>MySQL</span>
+                </div>
+            </a>
+
+            <a href="https://printhub.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/printhub.png' %}" alt="PrintHub Website">
+                <h2>PrintHub</h2>
+                <p>A website that helps printing shops manage their business.</p>
+                <div>
+                    <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
                 </div>
             </a>
 
@@ -138,15 +140,7 @@
                 </div>
             </div> -->
 
-            <a href="https://printhub.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
-                <img src="{% static 'images/project-photos/printhub.png' %}" alt="PrintHub Website">
-                <h2>PrintHub</h2>
-                <p>A website that helps printing shops manage their business.</p>
-                <div>
-                    <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
-                </div>
-            </a>
-
+            <!--
             <div class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/tech-quiz.png' %}" alt="Tech-Quiz Website">
                 <h2>Tech-Quiz</h2>
@@ -155,6 +149,7 @@
                     <span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span>
                 </div>
             </div>
+            -->
 
             <!--
             <div class="project-box" data-aos="fade-up" data-aos-duration="500">
@@ -167,6 +162,24 @@
             </div>
             -->
 
+            <a href="https://ojthourstracker.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/ojthourstracker-dark.png' %}" alt="OJT Hours Tracker Website">
+                <h2>OJT Hours Tracker</h2>
+                <p>A website to track and manage internship hours.</p>
+                <div>
+                    <span>SASS</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>MySQL</span>
+                </div>
+            </a>
+
+            <a href="https://dormus.ph/repair-and-maintenance-service-request-form/" target="_blank" rel="noopener noreferrer" class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/dormus.png' %}" alt="Dormus Website">
+                <h2>Dormus</h2>
+                <p>Integrated a repair and maintenance service request form for Dormus.</p>
+                <div>
+                    <span>Javascript</span><span>WordPress</span>
+                </div>
+            </a>
+
             <a href="{% url 'private_project' %}" class="project-box" data-aos="fade-up" data-aos-duration="500">
                 <img src="{% static 'images/project-photos/email-signature2.png' %}" alt="Changing Latitudes Email Signature">
                 <h2>Email Signature</h2>
@@ -175,6 +188,16 @@
                     <span>HTML</span><span>CSS</span>
                 </div>
             </a>
+
+            <!-- <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                <img src="{% static 'images/project-photos/weeb-tee.png' %}" alt="Weeb Tee Website">
+                <h2>Weeb Tee</h2>
+                <p>A mobile-first e-commerce web-design for anime clothing.</p>
+                <div>
+                    <span>HTML</span><span>CSS</span><span>Javascript</span>
+                </div>
+            </div> -->
+
         </div>
     </section>
 

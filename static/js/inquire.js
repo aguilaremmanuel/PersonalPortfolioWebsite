@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 inquire_form.reset();
                 document.querySelectorAll('.service-btn').forEach(btn => btn.classList.remove('selected'));
-                
             })
             .catch(error => {
                 console.error('Error:', error);
